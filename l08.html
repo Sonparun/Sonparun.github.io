@@ -1,0 +1,539 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+
+		<title>Python by Sonparun Boonmak</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body style="background-color:#202124;">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logopython.png" alt="" /></span><span class="title">Python</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+										<nav id="menu">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><p>Lecture Python</p></li>
+							<ul>
+								<li><a href="l00.html">Lecture 00</a></li>
+								<li><a href="l01.html">Lecture 01</a></li>
+								<li><a href="l02.html">Lecture 02</a></li>
+								<li><a href="l03.html">Lecture 03</a></li>
+								<li><a href="l04.html">Lecture 04</a></li>
+								<li><a href="l05.html">Lecture 05</a></li>
+								<li><a href="l06.html">Lecture 06</a></li>
+								<li><a href="l07.html">Lecture 07</a></li>
+								<li><a href="l08.html">Lecture 08</a></li>
+								<li><a href="l09.html">Lecture 09</a></li>
+							</ul>
+							<li><a href="me.html">About Me</a></li>
+							<li><a href="https://www.onlinegdb.com/">☛ Try yourself ☚</a></li>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>LECTURE - 08 DICTIONARY AND SET</h1>
+							<span class="image main"><img src="images/l00.png" alt="" /></span>
+							<h1>Dictionary</h1>
+							<p>Dictionary คืออะไร และการประกาศและใช้งานสำหรับเก็บข้อมูลในการเขียนโปรแกรม นอกจากนี้ เรายังจะพูดถึงการใช้งานเมธอดและ built-in functions ของ Dictionary และตัวอย่างการใช้งานกับการเขียนโปรแกรมในรูปแบบต่างๆ ในภาษา Python<br/>
+							Dictionary คือประเภทข้อมูลที่เก็บข้อมูลในรูปแบบคู่ของ Key และ Value โดยที่ Key ใช้สำหรับเป็น Index ในการเข้าถึงข้อมูลและ Value เป็นค่าข้อมูลที่สอดคล้องกับ Key ของมัน การเข้าถึงข้อมูลใน Dictionary นั้นรวดเร็วเพราะว่าข้อมูลได้ถูกทำ Index ไว้อัตโนมัติโดยใช้ Key นอกจากนี้ Dictionary ยังมีเมธอดและฟังก์ชันอำนวยความสะดวกสำหรับการทำงานทั่วไป</p>
+							<h1>การประกาศ Dictionary</h1>
+							<p>ในการใช้งาน Dictionary เรามักจะใช้เก็บข้อมูลที่สามารถใช้บางอย่างที่สามารถจำแนกข้อมูลออกจากกันได้ โดยกำหนดให้สิ่งนั้นเป็น Key ในการประกาศ Dictionary สมาชิกของมันจะอยู่ภายในวงเล็บปีกกา {} มาดูตัวอย่างในการประกาศ Dictionary ในภาษา Python</p>
+							<pre><code>scores = {'james': 1828, 'thomas': 3628, 'danny': 9310}
+scores['bobby'] = 4401
+
+numbers = {1: 'One', 2: 'Two', 3: 'Three'}
+
+print(scores)
+print(numbers)</code></pre>
+<p>ในตัวอย่าง เราได้ประกาศตัวแปร Dictionary ที่มีชื่อว่า scores สำหรับเก็บคะแนนของแต่ละคนโดยใช้ชื่อเป็น Key และค่าของมันก็คือคะแนน สมาชิกของ Dictionary แต่ละตัวจะถูกกำหนดในรูปแบบ key: value และคั่นสมาชิกแต่ละตัวด้วยเครื่องหมายคอมมา เราได้กำหนดค่าเริ่มต้นสามค่าให้กับ Dictionary และสามารถกำหนดค่าให้กับ Dictionary ในรูปแบบ scores['bobby'] ได้หลังจากที่ตัวแปรถูกสร้างแล้ว สังเกตว่าเราสามารถใช้ Key เป็น String หรือประเภทข้อมูลอื่นๆ ได้ ต่อมาตัวแปร numbers เป็น Dictionary ที่มี Key เป็นตัวเลข</p>
+<pre><code>{'james': 1828, 'thomas': 3628, 'danny': 9310, 'bobby': 4401}
+{1: 'One', 2: 'Two', 3: 'Three'}
+</code></pre>
+<p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม ในการเข้าถึงข้อมูลภายใน Dictionary เพื่ออ่านค่าและอัพเดทข้อมูล</p>							
+							<h1>การเข้าถึงข้อมูลภายใน Dictionary</h1>
+							<p>หลังจากที่เราได้ประกาศ Dictionary ไปแล้ว ต่อไปจะเป็นการเข้าถึงข้อมูลเพื่ออ่านและอัพเดทข้อมูลโดยผ่านทาง Key ของมัน มาดูตัวอย่างการเข้าถึงข้อมูลใน Dictionary</p>
+							<pre><code>scores = {'james': 1828, 'thomas': 3628, 'danny': 9310, 'bobby': 4401}
+
+# display data
+print('james =>', scores['james'])
+print('thomas =>', scores['thomas'])
+print('danny =>', scores['danny'])
+print('bobby =>', scores['bobby'])
+
+# update data
+scores['james'] = scores['james'] + 1000
+scores['thomas'] = 100
+
+print('james =>', scores['james'])
+print('thomas =>', scores['thomas'])
+</code></pre>
+<p>ในตัวอย่าง เรามีตัวแปร scores สำหรับเก็บคะแนนของผู้เล่นโดยชื่อเป็น Key ของ Dictionary ในการเข้าถึงข้อมูลนั้นจะใช้ Key ของมัน ในส่วนแรกเป็นการเข้าถึงข้อมูลภายใน Dictionary เพื่อแสดงผลคะแนนของแต่ละ Key ออกมาทางหน้าจอ ต่อมาเป็นการอัพเดทข้อมูลใน Dictionary โดยเราได้เพิ่มค่าให้กับ Key 'james' ขึ้นไปอีก 1000 และกำหนดค่าให้กับ Key 'thomas' เป็น 100 และแสดงผลอีกครั้ง</p>
+<pre><code>james => 1828
+thomas => 3628
+danny => 9310
+bobby => 4401
+james => 2828
+thomas => 100
+</code></pre>
+<p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม ในการเข้าถึงข้อมูลภายใน Dictionary เพื่ออ่านค่าและอัพเดทข้อมูล</p>
+<h1>การอ่านค่าใน Dictionary ด้วยคำสั่ง For loop</h1>
+<p>คำสั่ง For loop นั้นเป็นคำสั่งที่ยืดหยุ่นและสามารถใช้งานได้อย่างหลากหลาย ในการอ่านค่าใน Dictionary นั้นเราสามารถใช้ For loop เพื่อวนอ่านค่าทั้ง Key และ Values ใน Dictionary ได้ มาดูตัวอย่างของโปรแกรม</p>
+<pre><code>countries = {'de': 'Germany', 'ua': 'Ukraine',
+             'th': 'Thailand', 'nl': 'Netherlands'}
+
+for k, v in countries.items():
+    print(k, v)
+
+# iterate through keys
+print('Key:', end = ' ')
+for k in countries.keys():
+    print(k, end = ' ')
+
+# iterate through values
+print('\nValue:', end = ' ')
+for v in countries.values():
+    print(v, end = ' ')
+</code></pre>
+<p>ในตัวอย่าง เป็นการใช้งานคำสั่ง For loop วนอ่านค่าใน Dictionary ซึ่งมี 3 loop ด้วยกัน ในลูปแรกเป็นการอ่านค่าแบบ Key และ Value ในแต่ละรอบของการทำงานเราเอาข้อมูลใน Dictionary ด้วยเมธอด items() ซึ่งจะส่งค่ากลับเป็น Key และ Value กับมาและโหลดใส่ในตัวแปร k และ v ตามลำดับ</p>
+<p>ในลูปที่สอง เป็นการวนอ่าน Key ทั้งหมดภายใน Dictionary โดยเมธอด keys() จะส่งค่ากลับเป็น List ของ Key ทั้งหมดและโหลดใส่ในตัวแปร k แต่ละรอบของลูป และในลูปสุดท้ายนั้นเป็นการอ่าน Value ทั้งหมด และเมธอด values() เพื่อรับค่าของ Value ทั้งหมดมาและใส่ในตัวแปร v ในแต่ละรอบของลูป</p>
+<pre><code>de Germany
+ua Ukraine
+th Thailand
+nl Netherlands
+Key: de ua th nl 
+Value: Germany Ukraine Thailand Netherlands 
+</code></pre>
+<p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม ในการใช้คำสั่ง For loop เพื่ออ่านข้อมูลใน Dictionary ในภาษา Python</p>
+<h1>Python Dictionary methods</h1>
+<p>Dictionary มีเมธอดที่ให้คุณสามารถทำงานกับมันได้ง่ายขึ้น โดยส่วนมากแล้วมักจะเป็นเมธอดในการอัพเดทและรับค่าข้อมูลภายใน Dictionary ต่อไปมาดูตัวอย่างการใช้งานเมธอดของ Dictionary ในภาษา Python</p>
+<pre><code>countries = {'de': 'Germany', 'ua': 'Ukraine',
+             'th': 'Thailand', 'nl': 'Netherlands'}
+
+print(countries.keys())
+print(countries.values())
+
+print(countries.get('de')) # equal to countries['de']
+countries.setdefault('tr', 'Turkey')
+
+print(countries.popitem())
+print(countries.popitem())
+
+print(countries.items())</code></pre>
+<p>ในตัวอย่าง เป็นโปรแกรมในการใช้งานเมธอดของ Dictionary ตัวแปรของเรา countries มาจากตัวอย่างก่อนหน้าที่มี Key เป็นชื่อย่อของประเทศและ Value เป็นชื่อเต็มของประเทศ เมธอด keys() ส่งค่ากลับเป็น List ของ Key ทั้งหมดภายใน Dictionary และเมธอด values() นั้นจะส่งเป็น List ของ Value
+
+หลังจากนั้นเป็นการเข้าถึงข้อมูลด้วยเมธอด get() โดยมี Key เป็นอาร์กิวเมนต์ซึ่งผลลัพธ์การทำงานของมันจะเหมือนกับการเข้าถึงข้อมูลโดยตรง เช่น countries['de'] และเมธอด setdefault() ใช้รับค่าจากคีย์ที่กำหนด ถ้าไม่มีจะเป็นการเพิ่มค่าดังกล่าวเข้าไปใน Dictionary และต่อมาเมธอด popitem() จะนำสมาชิกตัวสุดท้ายออกจาก Dictionary และส่งค่าดังกล่าวกลับมาเป็น Tuple ออบเจ็ค ส่วนเมธอด items() นั้นจะส่งค่ากลับมาเป็น List ของ Tuple ของออบเจ็คของ Key และ Value ทั้งหมด</p>
+<pre><code>dict_keys(['de', 'ua', 'th', 'nl'])
+dict_values(['Germany', 'Ukraine', 'Thailand', 'Netherlands'])
+Germany
+('tr', 'Turkey')
+('nl', 'Netherlands')
+dict_items([('de', 'Germany'), ('ua', 'Ukraine'), ('th', 'Thailand')])</code></pre>
+<p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม ในการใช้เมธอดของ Dictionary ในภาษา Python และจากในตัวอย่างนั้นเป็นเพียงส่วนหนึ่งของเมธอดที่มีเท่านั้น สำหรับเมธอดทั้งหมดใน Dictionary นั้นแสดงดังตารางข้างล่างนี้</p>
+<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Methods</th>
+													<th>Description</th>												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>clear()</td>
+													<td>ลบข้อมูลทั้งหมดภายใน Dictionary</td>
+
+												</tr>
+												<tr>
+													<td>copy()</td>
+													<td>คัดลอก Dictionary ทั้งหมดไปยังอันใหม่</td>
+													
+												</tr>
+												<tr>
+													<td>get(key[, default])</td>
+													<td>ส่งค่าข้อมูลใน Dictionary จาก Key ที่กำหนด ถ้าหากไม่มี Key อยู่และไม่ได้กำหนด default จะทำให้เกิดข้อผิดพลาด `KeyError`</td>
+												
+												</tr>
+																								<tr>
+													<td>items()</td>
+													<td>ส่งค่ากลับเป็นออบเจ็คของ Key และ Value</td>
+												
+												</tr>
+												<tr>
+													<td>keys()</td>
+													<td>ส่งค่ากลับเป็น List ของ Key ทั้งหมดใน Dictionary</td>
+												
+												</tr>
+												<tr>
+													<td>pop(key[, default]</td>
+													<td>ส่งค่ากลับเป็นค่าสุดท้ายใน Dictionary</td>
+												</tr>
+																								<tr>
+													<td>popitem()</td>
+													<td>ส่งค่ากลับเป็น Tuple ออบเจ็คของ Key และ Value</td>
+												</tr>
+																								<tr>
+													<td>setdefault(key[, default])</td>
+													<td>ส่งค่ากลับเป็นค่าของ Key ที่กำหนด ถ้าหากไม่มี Key อยู่ใส่ข้อมูลเข้าไปใน Dictionary</td>
+												</tr>
+																								<tr>
+													<td>update([other])</td>
+													<td>	อัพเดท Dictionary กับคู่ของ Key และ Value จากออบเจ็คอื่น และเขียนทับ Key ที่มีอยู่</td>
+												</tr>
+																								<tr>
+													<td>values()</td>
+													<td>ส่งค่ากลับเป็น List ของ Value ทั้งหมดใน Dictionary</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="box alt">
+									
+								</section>
+<h1>Python Dictionary functions</h1>
+<p>ฟังก์ชันที่เป็นพื้นฐานและสามารถใช้ได้กับโครงสร้างข้อมูลทุกประเภทคือฟังก์ชัน len() เป็นฟังก์ชันที่ใช้สำหรับนับจำนวนสมาชิกของเจ็ค และ Dictionary ยังมีฟังก์ชัน iter() ที่ทำงานเหมือนกับเมธอด items() นี่เป็นตารางของฟังก์ชันที่สามารถใช้ได้กับ Dictionary</p>
+<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Function</th>
+													<th>Description</th>												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>len(dict)</td>
+													<td>ส่งค่ากลับเป็นจำนวนของออบเจ็คใน Dictionary</td>
+
+												</tr>
+												<tr>
+													<td>iter(dict)</td>
+													<td>ส่งค่ากลับเป็นออบเจ็คของ Key และ Value</td>
+													
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="box alt">
+									
+								</section>
+								<p>คุณสามารถใช้คำสั่ง del เพื่อลบข้อมูลภายใน Dictionary ได้ เช่น คำสั่ง del countries['de'] เพื่อลบสมาชิกที่มี Key ที่กำหนดออกไป และคำสั่ง del countries นั้นเป็นการลบทั้งตัวแปร</p>
+<h1>Set (เซต) ใน Python</h1>
+<p>set คือ ชุดข้อมูลที่มีการแสดงผลไม่เป็นไปตามลำดับ ทำให้ไม่สามารถเข้าถึงข้อมูลโดยการ index ไม่สามารถมีข้อมูลซ้ำกันได้ และทำงานเร็วกว่า list</p>
+<h1>การเข้าถึงข้อมูล</h1>
+<p>เราไม่สามารถเข้าถึงข้อมูลด้วยการ index ได้เหมือน list และ tuple หรือใช้ key ในการเข้าถึงข้อมูลได้แบบ dictionary
+การเข้าถึงข้อมูลใน set เราต้องใช้การ loop ข้อมูลใน set โดยใช้ for…loop</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+
+for x in set1:
+  print(x)
+
+output:
+pomelo
+melon
+mango</code></pre>
+<p>การเข้าถึงข้อมูลอีกแบบหนึ่งคือ ใช้ in คีย์เวิร์ดเพื่อดูว่ามีข้อมูลที่ต้องการใน set หรือไม่ จะได้คำตอบเป็น boolean</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+
+print('melon' in set1)
+
+output:
+True</code></pre>
+<h1>เพิ่มข้อมูล</h1>
+<p>หากต้องการเพิ่มข้อมูลเดียว ให้ใช้ method add()</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+set1.add('apple')
+print(set1)
+
+output:
+{'pomelo', 'apple', 'mango', 'melon'}</code></pre>
+<p>หากต้องการเพิ่มข้อมูลมากกว่า 1 ตัว ใช้ method update()</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+set1.update(['apple', 'peach', 'tangerine'])
+print(set1)
+
+output:
+{'apple', 'pomelo', 'peach', 'mango', 'melon', 'tangerine'}</code></pre>
+<h1>ลบข้อมูลใน set discard() method</h1>
+<p>ลบข้อมูลที่ระบุ หากไม่มีข้อมูลนั้นใน set จะไม่แสดง error</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+set1.discard('apple')
+print(set1)
+
+output:
+{'melon', 'pomelo', 'mango'}</code></pre>
+<h1>ลบข้อมูลใน set remove() method</h1>
+<p>ลบข้อมูลที่ระบุใน set และจะแสดง error หากไม่มีข้อมูลที่ระบุใน set</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+set1.remove('apple')
+print(set1)
+
+output:
+KeyError: 'apple'</code></pre>
+<h1>ลบข้อมูลใน set pop() method</h1>
+<p>ใช้ลบข้อมูลตัวสุดท้ายใน set ปัญหาคือ เราไม่รู้ว่าแต่ละครั้งที่โปรแกรมรัน ข้อมูลแต่ละตัวจะอยู่ตำแหน่งไหน เพราะฉะนั้นหากเราใช้ method นี้ เราจะไม่มีทางรู้ล่วงหน้าได้เลยว่าข้อมูลตัวไหนจะถูกลบออกจาก set</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+x = set1.pop()
+print(x)
+print(set1)
+
+output:
+pomelo
+{'melon', 'mango'}</code></pre>
+<h1>ลบข้อมูลใน set clear() method</h1>
+<p>ใช้ลบข้อมูลทั้งหมดออกจาก set</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+set1.clear()
+print(set1)
+
+output:
+set()</code></pre>
+<h1>ลบข้อมูลใน set del keyword</h1>
+<p>ใใช้ลบข้อมูลทั้งหมดออกจาก set</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+set1.clear()
+print(set1)
+
+output:
+set()</code></pre>
+<h1>จำนวนข้อมูลใน set</h1>
+<p>ใช้ len() method หาจำนวนข้อมูลใน set</p>
+<pre><code>set1 = {'melon', 'mango', 'pomelo'}
+print(len(set1))
+
+output:
+3
+</code></pre>
+<h1>รวม set เข้าด้วยกัน union() method</h1>
+<p>จะได้ set ใหม่ที่เกิดจากการรวมตั้งแต่สอง set ขึ้นไปเข้าด้วยกัน</p>
+<pre><code>set1 = {'melon', 'mango'}
+set2 = {1, 2, 'pomelo'}
+set3 = {'melon', 3.1}
+
+set4 = set1.union(set2, set3)
+print(set4)
+
+output:
+{'melon', 1, 2, 3.1, 'pomelo', 'mango'}
+</code></pre>
+
+<h1>รวม set เข้าด้วยกัน update() method</h1>
+<p>เป็นการนำข้อมูลของ set อื่นๆไปใส่ในอีก set หนึ่ง</p>
+<pre><code>set1 = {'melon', 'mango'}
+set2 = {1, 2, 'pomelo'}
+set3 = {'melon', 3.1}
+
+set1.update(set2, set3)
+print(set1)
+
+output:
+{1, 2, 'melon', 3.1, 'mango', 'pomelo'}
+</code></pre>
+<h1>รวม set เข้าด้วยกัน set() constructor</h1>
+<p>เป็นการสร้าง set โดยใช้ฟังก์ชั่น set()</p>
+<pre><code>set1 = set(('melon', 'mango', 'pomelo'))
+print(set1)
+
+output:
+{'pomelo', 'mango', 'melon'}
+</code></pre>
+<h1>Set Built-in Methods</h1>
+<section>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Method</th>
+													<th>Description</th>												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>add()</td>
+													<td>สเพิ่มข้อมูลใน set</td>
+
+												</tr>
+												<tr>
+													<td>update()</td>
+													<td>เพิ่มข้อมูลมากกว่าหนึ่งจำนวนใน set และสามารถนำข้อมูลใน set หนึ่งไปใส่ในอีก set หนึ่งได้</td>
+													
+												</tr>
+																							<tr>
+													<td>discard()</td>
+													<td>ลบข้อมูลที่ต้องการออกจาก set หากไม่มีข้อมูลนั้นอยู่แล้วจะไม่แสดง error</td>
+
+												</tr>
+												<tr>
+													<td>remove()</td>
+													<td>ลบข้อมูลที่ต้องการออกจาก set หากไม่มีข้อมูลนั้นจะแสดง error</td>
+													
+												</tr>
+																							<tr>
+													<td>pop()</td>
+													<td>ลบข้อมูลตัวสุดท้ายใน set</td>
+
+												</tr>
+												<tr>
+													<td>clear()</td>
+													<td>ลบข้อมูลทั้งหมดออกจาก set</td>
+													
+												</tr>
+																							<tr>
+													<td>len()</td>
+													<td>หาจำนวนของข้อมูลทั้งหมดใน set</td>
+
+												</tr>
+												<tr>
+													<td>union()</td>
+													<td>รวม set ตั้งแต่สอง set ขึ้นไปเข้าด้วยกันเป็น set ใหม่</td>
+													
+												</tr>
+																			<tr>
+													<td>copy()</td>
+													<td>คัดลอก set แบบ deep copy</td>
+
+												</tr>
+												<tr>
+													<td>difference()</td>
+													<td>ได้ set ใหม่ที่มีแต่ข้อมูลที่ต่างกับ set อื่นๆเท่านั้น</td>
+													
+												</tr>
+																							<tr>
+													<td>difference_update()</td>
+													<td>ลบข้อมูลใน original set ที่ไปซ้ำกับข้อมูลใน set อื่นๆ</td>
+
+												</tr>
+												<tr>
+													<td>intersection()</td>
+													<td>ได้ set ใหม่ที่มีข้อมูลที่เหมือนกับ set อื่นๆเท่านั้น</td>
+													
+												</tr>
+																							<tr>
+													<td>intersection_update()</td>
+													<td>แก้ไขข้อมูลใน original set ให้มีแต่ข้อมูลที่เหมือนกับ set อื่นเท่านั้น</td>
+
+												</tr>
+												<tr>
+													<td>isdisjoint()</td>
+													<td>เช็คว่าข้อมูลทุกตัวใน set ที่เราเช็คไม่ซ้ำกับข้อมูลใน set อื่นๆจริงหรือไม่</td>
+													
+												</tr>
+																							<tr>
+													<td>issubset()</td>
+													<td>เพื่อเช็คว่าข้อมูลทุกตัวใน set หนึ่งปรากฏอยู่ในอีก set หนึ่งจริงหรือไม่</td>
+
+												</tr>
+												<tr>
+													<td>issuperset()</td>
+													<td>เพื่อเช็คว่ามีข้อมูลทุกตัวของ set อื่นปรากฏอยู่ใน set นี้หรือไม่</td>
+													
+												</tr>
+																																		<tr>
+													<td>symmetric_difference()</td>
+													<td>ได้ set ใหม่ที่รวมกันของข้อมูลที่ต่างกันเท่านั้นระหว่างสอง set่</td>
+
+												</tr>
+												<tr>
+													<td>symmetric_difference_update()</td>
+													<td>เพิ่มข้อมูลที่ไม่มีใน original set เข้าไป และลบข้อมูลที่เหมือนกันกับอีก set หนึ่งออกจาก original set</td>
+													
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="box alt">
+									
+								</section>
+
+<h2>LESSON SUMMARY</h2>
+<h3>Dictionaries, including:</h3>
+<p>• Creating dictionaries<br/>
+• การแทรก การดึงข้อมูล การเพิ่ม และการลบคู่คีย์-ค่า<br/>
+• for loops และinและnot in operators<br/>
+• Dictionary methods<br/>
+<h3>Sets:</h3>
+• Creating sets<br/>
+• การเพิ่มองค์ประกอบและการลบองค์ประกอบออกจาก sets<br/>
+• การหา set union, intersection, difference และ symmetric difference<br/>
+• การหา  subsets and supersets<br/>
+<h3>Serializing objects</h3><br/>
+• การหยิบละการแกะวัตถุ
+									</p>
+</div>
+</div>
+<!-- Footer -->
+					<footer style="background-color:#2a2b2f;">
+						<div class="inner">
+							<section>
+								<h1>Get in touch</h1>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h1>Follow</h1>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/SDivender" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://github.com/Sonparun" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://mail.google.com/mail/u/3/#inbox/FMfcgzGqQmZzSKRHhTLQwLVnKgXNXBKn?compose=VpCqJTCpvHSHrdzhJZTfJZRtzHQGgplcJmdRXmVVkrzDsPRKppLxcZxZNGJNsBrLCHkHpJv" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

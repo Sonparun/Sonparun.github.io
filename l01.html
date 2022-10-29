@@ -6,7 +6,9 @@
 -->
 <html>
 	<head>
-		<title>Python by Sonparun Boonmak<</title>
+
+		<title>Python by Sonparun Boonmak</title>
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -36,12 +38,9 @@
 					</header>
 
 				<!-- Menu -->
-					<nav id="menu">
+										<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><p>Lecture Python</p></li>
-							<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><p>Lecture Python</p></li>
 							<ul>
@@ -56,24 +55,9 @@
 								<li><a href="l08.html">Lecture 08</a></li>
 								<li><a href="l09.html">Lecture 09</a></li>
 							</ul>
-							<li><p>Description and Examples</p></li>
-							<ul>
-								<li><a href="e00.html">Lecture 00</a></li>
-								<li><a href="e01.html">Lecture 01</a></li>
-								<li><a href="e02.html">Lecture 02</a></li>
-								<li><a href="e03.html">Lecture 03</a></li>
-								<li><a href="e04.html">Lecture 04</a></li>
-								<li><a href="e05.html">Lecture 05</a></li>
-								<li><a href="e06.html">Lecture 06</a></li>
-								<li><a href="e07.html">Lecture 07</a></li>
-								<li><a href="e08.html">Lecture 08</a></li>
-								<li><a href="e09.html">Lecture 09</a></l>
-							</ul>
-							<li><a href="me/index.html">About Me</a></li>
+							<li><a href="me.html">About Me</a></li>
 							<li><a href="https://www.onlinegdb.com/">☛ Try yourself ☚</a></li>
-						</ul>
 					</nav>
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
@@ -154,10 +138,498 @@ Python Language</code></pre><p>นี่เป็นผลลัพธ์กา�
 
 อย่างไรก็ตาม นี่เป็นการแนะนำเกี่ยวกับ String ในเบื้องต้นเท่านั้น เพราะว่า String นั้นมีเนื้อหาเป็นจำนวนมาก คุณจะได้เรียนรู้เกี่ยวกับ String อย่างละเอียด อีกครั้งในบทของ String</p>
 
-							<h1><b><a href="e01.html">►Lecture 01 Code</a></b></h1>
+									<section>
+									<h1>PYTHON OPERATORS</h1>
+									<h2>ARITHMETIC OPERATORS</h2>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>OPERATOR</th>
+													<th>MEANING</th>
+													<th>EXAMPLE</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>+</td>
+													<td>Add two operands or unary plus</td>
+													<td>x + y
++2</td>
+												</tr>
+												<tr>
+													<td>-</td>
+													<td>Subtract right operand from the left or unary minus</td>
+													<td>x - y
+-2</td>
+												</tr>
+												<tr>
+													<td>*</td>
+													<td>Multiply two operands</td>
+													<td>x * y</td>
+												</tr>
+												<tr>
+													<td>/</td>
+													<td>Divide left operand by the right one (always results into float)</td>
+													<td>x / y</td>
+												</tr>
+												<tr>
+													<td>%</td>
+													<td>Modulus - remainder of the division of left operand by the right</td>
+													<td>x % y (remainder of x/y)</td>
+												</tr>
+																								<tr>
+													<td>//</td>
+													<td>Floor division - division that results into whole number adjusted
+
+to the left in the number line</td>
+													<td>x // y</td>
+												</tr>
+																								<tr>
+													<td>**</td>
+													<td>Exponent - left operand raised to the power of right</td>
+													<td>x**y (x to the power y)</td>
+												</tr>
+											</tbody>
+										</table>
+										<pre><code>x=15
+y=4
+
+print('x + y =',x+y)
+print('x - y =',x-y)
+print('x * y =',x*y)
+print('x / y =',x/y)
+print('x % y =',x%y)
+print('x // y =',x//y)
+print('x ** y =',x**y)
+</code></pre>
+									</div>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_1.png" alt="" /></span></div>
+	
+									</div>
+									
+								</section>
+								
+								<h2>COMPARISON OPERATORS</h2>
+								<table>
+											<thead>
+												<tr>
+													<th>OPERATOR</th>
+													<th>MEANING</th>
+													<th>EXAMPLE</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>></td>
+													<td>Greater that - True if left operand is greater than the right</td>
+													<td>x > y</td>
+												</tr>
+												<tr>
+													<td><</td>
+													<td>Less that - True if left operand is less than the right</td>
+													<td>x < y</td>
+												</tr>
+												<tr>
+													<td>==</td>
+													<td>Equal to - True if both operands are equal</td>
+													<td>x == y</td>
+												</tr>
+												<tr>
+													<td>!=</td>
+													<td>Not equal to - True if operands are not equal</td>
+													<td>x != y</td>
+												</tr>
+												<tr>
+													<td>>=</td>
+													<td>Modulus - remainder of the division of left operand by the right</td>
+													<td>x % y (remainder of x/y)</td>
+												</tr>
+																								<tr>
+													<td><=</td>
+													<td>Less than or equal to - True if left operand is less than or equal
+
+to the right</td>
+													<td>x <= y</td>
+												</tr>
+											</tbody>
+										</table>
+<pre><code>x=10
+y=12
+
+
+print('x > y is',x>y)
+print('x < y is',x<y>)
+print('x == y is',x==y)
+print('x != y is',x!=y)
+print('x >= y is',x>=y)
+print('x <= y is',x<=y)
+</code></pre>
+																			<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_2.png" alt="" /></span></div>
+	
+										</div>
+										<section>
+									<h2>LOGICAL OPERATORS</h2>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>OPERATOR</th>
+													<th>MEANING</th>
+													<th>EXAMPLE</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>AND</td>
+													<td>True if both the operands are true</td>
+													<td>x and y</td>
+												</tr>
+												<tr>
+													<td>OR</td>
+													<td>True if either of the operands is true</td>
+													<td>x or y</td>
+												</tr>
+												<tr>
+													<td>NOT</td>
+													<td>True if operand is false (complements the operand)</td>
+													<td>not x</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+<pre><code>x=True
+y=False
+
+print('x and y is',x and y)
+print('x or y is',x or y)
+print('not x is',not x)</code></pre>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_3.png" alt="" /></span></div>
+	
+									</div>
+									
+								</section>
+									</div>
+									<section>
+									<h2>BITWISE OPERATORS</h2>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>OPERATOR</th>
+													<th>MEANING</th>
+													<th>EXAMPLE</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>&</td>
+													<td>Bitwise AND</td>
+													<td>x& y = 0 (0000 0000)</td>
+												</tr>
+												<tr>
+													<td>|</td>
+													<td>Bitwise OR</td>
+													<td>x | y = 14 (0000 1110)</td>
+												</tr>
+												<tr>
+													<td>~</td>
+													<td>Bitwise NOT</td>
+													<td>~x = -11 (1111 0101)</td>
+												</tr>
+																								<tr>
+													<td>^</td>
+													<td>Bitwise XOR</td>
+													<td>x ^ y = 14 (0000 1110)</td>
+												</tr>
+												<tr>
+													<td>>></td>
+													<td>Bitwise right shift</td>
+													<td>x>> 2 = 2 (0000 0010)</td>
+												</tr>
+												<tr>
+													<td><<</td>
+													<td><<</td>
+													<td>x<< 2 = 40 (0010 1000)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="box alt">
+									
+								</section>
+								<section>
+									<h2>BITWISE OPERATORS</h2>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>OPERATOR</th>
+													<th>EXAMPLE</th>
+													<th>EQUIVATENT TO</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>=</td>
+													<td>x = 5</td>
+													<td>x = 5</td>
+												</tr>
+												<tr>
+													<td>+=</td>
+													<td>x += 5</td>
+													<td>x = x + 5</td>
+												</tr>
+												<tr>
+													<td>-=</td>
+													<td>x -= 5</td>
+													<td>x = x - 5</td>
+												</tr>
+												<tr>
+													<td>*=</td>
+													<td>x *= 5</td>
+													<td>x = x * 5</td>
+												</tr>
+												<tr>
+													<td>/=</td>
+													<td>x /= 5</td>
+													<td>x = x / 5</td>
+												</tr>
+												<tr>
+													<td>%=</td>
+													<td>x %= 5</td>
+													<td>x = x % 5</td>
+												</tr>
+												<tr>
+													<td>//=/td>
+													<td>x //= 5</td>
+													<td>x = x // 5</td>
+												</tr>
+												<tr>
+													<td>**=</td>
+													<td>x **= 5</td>
+													<td>x = x ** 5</td>
+												</tr>
+												<tr>
+													<td>&=</td>
+													<td>x &= 5</td>
+													<td>x = x & 5</td>
+												</tr>
+												<tr>
+													<td>|=</td>
+													<td>x |= 5</td>
+													<td>x = x | 5</td>
+												</tr>
+												<tr>
+													<td>^=</td>
+													<td>x ^= 5/td>
+													<td>x = x ^ 5</td>
+												</tr>
+												<tr>
+													<td>>>=</td>
+													<td>x >>= 5</td>
+													<td>x = x >> 5</td>
+												</tr>
+												<tr>
+													<td><<=</td>
+													<td>x <<= 5</td>
+													<td>x = x << 5</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</section>
+									<section>
+									<h2>IDENTITY OPERATORS</h2>
+									<p>is และ is not ตัวดำเนินการข้อมูลประจำตัวใน Python ใช้เพื่อตรวจสอบว่าสอง
+ค่า (หรือตัวแปร) จะอยู่ที่ส่วนเดียวกันของหน่วยความจำ สองตัวแปร
+ที่เท่ากันไม่ได้หมายความว่าเหมือนกัน</p>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>OPERATOR</th>
+													<th>MEANING</th>
+													<th>EXAMPLE</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>IS</td>
+													<td>True if the operands are identical (refer to the same object)</td>
+													<td>x is True</td>
+												</tr>
+												<tr>
+													<td>IS NOT</td>
+													<td>True if the operands are not identical (do not refer to the same
+
+object)</td>
+													<td>x is not True</td>
+												</tr>
+											</tbody>
+										</table>
+										<pre><code>x1=5
+y1=5
+x2='Hello'
+y2='Hello'
+x3=[1,2,3]
+y3=[1,2,3]
+
+print(x1 is not y1)
+print(x2 is y2)
+print(x3 is y3)</code></pre>
+									</div>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_3.png" alt="" /></span></div>
+	
+									</div>
+									
+								</section>
+								<h1>INPUT</h1>
+								<p>โปรแกรมมักต้องการinputที่ผู้ใช้พิมพ์บน
+แป้นพิมพ์จเพื่อจะใช้ฟังก์ชัน Python
+ฟังก์ชั่นinputในตัวของ Python ใช้เพื่ออ่านinputจากแป้นพิมพ์
+ฟังก์ชั่นอ่านข้อมูลที่ป้อนที่แป้นพิมพ์และ
+ส่งคืนข้อมูลนั้นเป็นStringsกลับไปที่โปรแกรม ปกติการใช้
+ฟังก์ชันinputในคำสั่งการมอบหมายที่เป็นไปตามรูปแบบทต่อไปนี้</p>
+<pre><code>first_name=input('Enter your first name: ')
+last_name=input('Enter your last name: ')
+
+print('Hello',first_name,last_name)</code></pre>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_4.png" alt="" /></span></div>
+	
+									</div>
+									</div>
+									<h2>INPUT NUMBERS</h2>
+									<p>ฟังก์ชันinputจะคืนค่าอินพุตของผู้ใช้เป็นstringเสมอ แม้ว่า user
+ป้อนข้อมูลที่เป็นnumeric ตัวอย่างเช่น สมมติว่าคุณเรียกใช้ฟังก์ชันinput
+พิมพ์หมายเลข 87 แล้วกดปุ่ม Enter ค่าที่ส่งคืนจาก
+ฟังก์ชันinputคือstring '87' นี่อาจเป็นปัญหาได้หากคุณต้องการใช้
+ค่าในการดำเนินการทางคณิตศาสตร์ การคำนวณทางคณิตศาสตร์สามารถทำได้บน เท่านั้น
+ค่าตัวเลข ไม่ใช่string</p>
+<table>
+											<thead>
+												<tr>
+													<th>FUNCTION</th>
+													<th>DESCRIPTION</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>int(item)</td>
+													<td>You pass an argument to the int() function and it returns the argument’s value
+
+converted to an int.</td>
+												</tr>
+												<tr>
+													<td>float(item)</td>
+													<td>You pass an argument to the float() function and it returns the argument’s value
+
+converted to a float.</td>
+												</tr>
+											</tbody>
+										</table>
+<pre><code>name=input('What is your name? ')
+age=int(input('What is your age? '))
+income=float(input('What is your income? '))
+
+print('Here is the data you entered:')
+print('Name: ',name)
+print('Age: ',age)
+print('Income: ',format(income,'12,.2f'))</code></pre>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_5.png" alt="" /></span></div>
+	
+									</div>
+									</div>
+									<h2>READ MULTIPLE VALUES FROM KEYBOARDS</h2>
+<pre><code>a,b,c=input().split()
+
+print('a =',a)
+print('b =',b)
+print('c =',c)
+</code></pre>						<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_6.png" alt="" /></span></div>
+	
+									</div>
+									</div>
+<pre><code>a,b,c=[int(e)for e in input().split()]
+
+print('a =',a)
+print('b =',b)
+print('c =',c)
+</code></pre>						<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_7.png" alt="" /></span></div>
+	
+									</div>
+									</div>
+<pre><code>a,b,c=[float(e)for e in input().split()]
+
+print('a =',a)
+print('b =',b)
+print('c =',c)
+</code></pre>						<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/e01_8.png" alt="" /></span></div>
+	
+									</div>
+									</div>
+									<h1>COMMENTS</h1>
+									<p>Commentsเป็นหมายเหตุของคำอธิบายว่าบรรทัดเอกสารหรือส่วนของ
+โปรแกรม Commentsเป็นส่วนหนึ่งของโปรแกรม แต่ Pythonมีไว้สำหรับอธิบายหรืออยากสื่อความหมายของโค้ดนั้นๆ</p>
+<pre><code>"""
+
+This is Comment
+
+"""
+#also Comment
+print('Hello Comment')
+
+</code></pre><div class="box alt">
+									<div class="row gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="images/e01_9.png" alt="" /></span></div>
+									</div>
+									</div>
+									<h2>LESSON SUMMARY</h2>
+									<p>• คอมพิวเตอร์คือฮาร์ดแวร์<br />
+									• คอมพิวเตอร์ทำสิ่งต่างๆ ได้หลากหลายเพราะสามารถโปรแกรมได้<br />
+									• โปรแกรมคือชุดคำสั่งที่คอมพิวเตอร์ปฏิบัติตามเพื่อดำเนินการงาน<br />
+									• ข้อมูลทั้งหมดที่เก็บไว้ในคอมพิวเตอร์จะถูกแปลงเป็นลำดับ 0 และ 1<br />
+									• หน่วยความจำของคอมพิวเตอร์แบ่งออกเป็นที่เก็บข้อมูลขนาดเล็กที่เรียกว่า bytes<br />
+									• CPU เข้าใจได้เฉพาะคำสั่งที่เขียนในเครื่องเท่านั้นภาษา<br />
+									• ภาษาแอสเซมบลีแรกมีแนวโน้มมากที่สุดที่พัฒนาขึ้นในทศวรรษที่ 1940 ที่มหาวิทยาลัยเคมบริดจ์<br />
+									• ภาษาระดับสูงที่สร้างขึ้นในปี 1950<br />
+									• print('Hello, World!')ง<br />
+									• Compiler รวบรวมโปรแกรมทั้งหมด (code)<br />
+									• CPU เข้าใจได้เฉพาะคำสั่งที่เขียนในเครื่องเท่านั้นภาษา<br />
+									• Interpreter แปลครั้งละ 1 บรรทัด<br />
+									• กำหนดค่าให้กับตัวแปรโดยใช้ variable_name = value syntax.<br />
+									• ชนิดข้อมูล: Integer, Float, Boolean, String,<br />
+									• Interpreter แปลครั้งละ 1 บรรทัด<br />
+									• String ถูกล้อมรอบด้วยเครื่องหมายคำพูด<br />
+									• Expression, Operator, Operand<br />
+									• variable = input(prompt)<br />
+									• comments บรรทัดเดียวเริ่มต้นด้วย octothorp (#)<br />
+									• commentsแบบหลายบรรทัดอยู่ในเครื่องหมายคำพูดสามคำ (""")<br />
+									</p></div>
+									</div>
+<!-- Footer -->
 						</div>
 					</div>
 				<!-- Footer -->
+
 					<footer style="background-color:#2a2b2f;">
 						<div class="inner">
 							<section>

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Python by Sonparun Boonmak</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body style="background-color:#202124;">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logopython.png" alt="" /></span><span class="title">Python</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+										<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><p>Lecture Python</p></li>
+							<ul>
+								<li><a href="l00.html">Lecture 00</a></li>
+								<li><a href="l01.html">Lecture 01</a></li>
+								<li><a href="l02.html">Lecture 02</a></li>
+								<li><a href="l03.html">Lecture 03</a></li>
+								<li><a href="l04.html">Lecture 04</a></li>
+								<li><a href="l05.html">Lecture 05</a></li>
+								<li><a href="l06.html">Lecture 06</a></li>
+								<li><a href="l07.html">Lecture 07</a></li>
+								<li><a href="l08.html">Lecture 08</a></li>
+								<li><a href="l09.html">Lecture 09</a></li>
+							</ul>
+							<li><a href="me.html">About Me</a></li>
+							<li><a href="https://www.onlinegdb.com/">☛ Try yourself ☚</a></li>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>LECTURE - 04 STRING</h1>
+							<span class="image main"><img src="images/l00.png" alt="" /></span>
+							<h1>MULTIPLE INPUT WITH MAP FUNCTION</h1>
+							<p>ฟังก์ชัน map() เป็นฟังก์ชันในตัวใน Python ซึ่งใช้ฟังก์ชันที่กำหนดกับแต่ละรายการของ iterable (เช่น list, tuple เป็นต้น) และส่งคืนรายการผลลัพธ์หรืออ็อบเจ็กต์แผนที่</p>
+							<pre><code>a,b,c=map(int,input().split())
+print(a,b,c)</code></pre><pre><code>a,b,c=input().split()
+print(a,b,c)
+</code></pre><pre><code>a,b,c=map(float,input().split())
+print(a,b,c)
+</code></pre>
+<h1>STRING INDEXING</h1>
+<pre><code>String : a p p l e
+
+Index : 0 1 2 3 4
+
+a = 'apple'[0]
+
+e = 'apple'[4]
+
+fruit = 'apple'
+
+first_character = fruit[0]</code></pre><h2>STRING ARE IMMUTABLE</h2><p>ใน Python stringsจะไม่เปลี่ยนรูป ซึ่งหมายความว่าเมื่อสร้างแล้ว
+ไม่สามารถเปลี่ยนแปลงได้ การดำเนินการบางอย่าง เช่น การต่อกัน การแก้ไขstrings</p>
+							<pre><code>friend='Kill'
+friend[0]='Q'</code></pre>
+<p>กำหนด คำว่า 'Kill' ใน friend<br />
+เมื่อเราพยายามเปลี่ยนตัวแรกใน friend เป็น 'W'<br />
+จะเห็นว่าไม่สามารถเปลี่ยนได้</p>
+<h1>STRING SLICING</h1>
+<p>Python เมื่อเราต้องการตัดเอาข้อความเฉพาะบางส่วนจากตัวแปรที่เก็บข้อมูลประเภท String เราสามารถทำได้โดยการใช้ slice syntax ซึ่งมีรูปแบบการใช้งานดังนี้</p>
+							<pre><code>ss="Sammy Shark!"
+print(ss[4])
+print(ss[6:11])
+print(ss[:5])
+print(ss[7:])
+print(ss[-4:-1])
+print(ss[6:11])
+print(ss[6:11:1])
+print(ss[0:12:2])
+print(ss[0:12:4])
+print(ss[::4])
+print(ss[::-1])
+print(ss[::-2])</code></pre>
+<h1>STRING FUNCTION</h1>
+<p>Len Python คือ คำสั่งสำหรับนับจำนวน กรณีถ้าใช้คำสั่ง len กับข้อความจะเป็นการนับจำนวนตัวอักษร และถ้าใช้คำสั่ง len กับตัวแปร List จะเป็นการนับจำนวนข้อมูลในตัวแปร List สามารถเขียนโปรแกรมได้ดังนี้</p>
+							<pre><code>fruit='apple'
+print(len(fruit))</code></pre><pre><code>city="Boston"
+index=0
+while index < len(city):
+    print(city[index])
+    index+=1</code></pre><h1>BASIC STRING METHODS<h1><h2>STRING METHODS</h2>
+	<p>• ทุกอย่างใน Python เป็น object<br/>
+• ทุก object มีประเภท<br/>
+• 'apple' เป็นวัตถุประเภท "str"<br/>
+• 'apple' เป็นobject string<br/>
+• Fruit  = 'apple'<br/>
+Fruitเ ป็น string<br/>
+• METHODS คือ fuctions ที่รันกับ object<br/>
+object.method()<br/>
+• string method:<br/>
+ upper() : ส่งกลับสำเนาของ string ที่เป็นตัวพิมพ์ใหญ่<br/>
+ lower() : ส่งกลับสำเนาของ stringเ ป็นตัวพิมพ์เล็ก<br/>
+ format() : ส่งคืน string ที่จัดรูปแบบแล้ว</p>
+ <pre><code>fruit='Apple'
+print(fruit.lower())
+apple</code></pre>
+  <pre><code>fruit='Apple'
+print(fruit.upper())
+APPLE</code></pre><h2>STRING CONCATENATION</h2><pre><code>print('I '+'love '+'Python.')
+print('I'+' love '+'Python.')
+print('I'+' love'+' Python.')</code></pre><pre><code>I love Python.
+I love Python.
+IlovePython.</code></pre>
+
+<h2>STRING BOOLEAN METHODS</h2>
+<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Method</th>
+													<th>True if</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>str.isalnum()</td>
+													<td>String consists of only alpanumeric characters(no symbols)</td>
+												</tr>
+												<tr>
+													<td>str.isalpha()</td>
+													<td>String consists of only alphabetic characters(no symbols)</td>
+												</tr>
+												<tr>
+													<td>str.islower()</td>
+													<td>String's alphabetic characters are all lower case</td>
+												</tr>
+																								<tr>
+													<td>str.isnumeric()</td>
+													<td>String consists of only numeric characters</td>
+												
+												</tr>
+																							</tr>
+																								<tr>
+													<td>str.isspace()</td>
+													<td>String consists of only whitespace characters</td>
+												
+												</tr>
+																							</tr>
+																								<tr>
+													<td>str.istitle()</td>
+													<td>String is in the title case</td>
+												
+												</tr>
+																							</tr>
+																								<tr>
+													<td>str.isuper()</td>
+													<td>String's alphabetic characters are all upper case</td>
+												
+												</tr>
+											</tbody>
+										</table>
+									</div>
+<pre><code>number='5'
+letter='abcdf!'
+space=' '
+print(number.isnumeric())
+print(letter.isalpha())
+print(space.isspace())</code></pre>
+<pre><code>True
+False
+True</code></pre>
+<pre><code>movie='2001: A SAMMY ODYSSEY'
+book='A Thousand Splendid Sharks'
+poem='sammy lived in a prett how town'
+
+print(movie.isalnum())
+print(movie.isupper())
+print(book.istitle())
+print(book.isupper())
+print(poem.istitle())
+print(poem.islower())
+</code></pre><pre><code>False
+True
+True
+False
+False
+True</code></pre>
+<h2>LESSON SUMMARY</h2>
+<p>• Stringsถูกล้อมรอบด้วยเครื่องหมายคำพูด<br/>
+• อักขระแต่ละตัวเป็น Strings ที่กำหนดดัชนี<br/>
+• การแยก Strings โดยใช้ str[Start:Stop:Stride]<br/>
+• ฟังก์ชันในตัว:<br/>
+  len() : ส่งกลับความยาวของรายการ<br/>
+  str() : ส่งกลับstrings<br/>
+• ทุกอย่างใน Python เป็น object<br/>
+• Objectสามารถมีวิธีการ<br/>
+• Methodคือฟังก์ชันที่ทำงานบนobject<br/>
+• str.upper()...ฯลฯ
+									</p></div>
+									</div>
+<!-- Footer -->
+					<footer style="background-color:#2a2b2f;">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/SDivender" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://github.com/Sonparun" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://mail.google.com/mail/u/3/#inbox/FMfcgzGqQmZzSKRHhTLQwLVnKgXNXBKn?compose=VpCqJTCpvHSHrdzhJZTfJZRtzHQGgplcJmdRXmVVkrzDsPRKppLxcZxZNGJNsBrLCHkHpJv" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

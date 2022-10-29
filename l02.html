@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Python by Sonparun Boonmak</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body style="background-color:#202124;">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logopython.png" alt="" /></span><span class="title">Python</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+										<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><p>Lecture Python</p></li>
+							<ul>
+								<li><a href="l00.html">Lecture 00</a></li>
+								<li><a href="l01.html">Lecture 01</a></li>
+								<li><a href="l02.html">Lecture 02</a></li>
+								<li><a href="l03.html">Lecture 03</a></li>
+								<li><a href="l04.html">Lecture 04</a></li>
+								<li><a href="l05.html">Lecture 05</a></li>
+								<li><a href="l06.html">Lecture 06</a></li>
+								<li><a href="l07.html">Lecture 07</a></li>
+								<li><a href="l08.html">Lecture 08</a></li>
+								<li><a href="l09.html">Lecture 09</a></li>
+							</ul>
+							<li><a href="me.html">About Me</a></li>
+							<li><a href="https://www.onlinegdb.com/">☛ Try yourself ☚</a></li>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>LECTURE - 02 IF-ELIF-ELSE DRAW.IO</h1>
+							<span class="image main"><img src="images/l00.png" alt="" /></span>
+							<p>คำสั่งเลือกเงื่อนไขในภาษา Python เราจะพูดถึงการควบคุมการทำงานโปรแกรมด้วยคำสั่ง if, if else และ elif เพื่อให้โปรแกรมสามารถทำงานซับซ้อนและมีประสิทธิภาพมากขึ้น ยกตัวอย่างเช่น เครื่องปรับอากาศจะทำงานอัตโนมัติถ้าหากอุณหภูมิในห้องสูงหรือต่ำเกินไป หรือรถยนต์จะแสดงสัญญาณเตือนหากน้ำมันกำลังใกล้จะหมด เป็นต้น ซึ่งทั้งหมดนี้เกิดจากการกำหนดเงื่อนไขการทำงานให้โปรแกรม มาเริ่มกับคำสั่ง if ในภาษา Python</p>
+							<h1>if</h1>
+							<p>คำสั่ง if เป็นคำสั่งที่ใช้ควบคุมการทำงานของโปรแกรมที่เป็นพื้นฐานและง่ายที่สุด เราใช้คำสั่ง if เพื่อสร้างเงื่อนไขให้โปรแกรมทำงานตามที่เราต้องการเมื่อเงื่อนไขนั้นตรงกับที่เรากำหนด เช่น การตรวจสอบค่าในตัวแปรกับตัวดำเนินการประเภทต่างๆ นี่เป็นรูปแบบของการใช้งานคำสั่ง if ในภาษา Python</p>
+																<pre><code>n = 10
+if n == 10:
+    print('n equal to 10')
+
+logged_in = False
+if not logged_in:
+    print('You must login to continue')
+
+m = 4
+if m % 2 == 0 and m > 0:
+    print('m is even and positive numbers')
+
+if 3 > 10:
+    print('This block isn\'t executed')</code></pre><p>ในตัวอย่าง เป็นการใช้งานคำสั่ง if เพื่อกำหนดให้โปรแกรมทำงานตามเงื่อนไขต่างๆ ในบล็อคแรกเป็นการตรวจสอบค่าในตัวแปร n ว่าเท่ากับ 10 หรือไม่ เนื่องจากค่าในตัวแปรนั้นเท่ากับ 10 ทำให้เงื่อนเป็นจริง และโปรแกรมทำงานในบล็อคของคำสั่ง if และต่อมาเรามีตัวแปร boolean logged_in เก็บค่าสถานะการเข้าสู่ระบบ เราได้ทำการตรวจสอบโดยการใช้ตัวดำเนินการ not สำหรับตรวจสอบว่าถ้าหากผู้ใช้ไม่เข้าสู่ระบบ จะแสดงข้อความบอกว่าต้องเข้าระบบก่อนที่จะใช้งาน</p>
+							<h1>if else</h1>
+							<p>อีกคำสั่งหนึ่งที่ทำงานควบคู่กับคำสั่ง if คือคำสั่ง else clause โดยโปรแกรมจะทำงานในคำสั่ง else ถ้าหากเงื่อนไขในคำสั่ง if นั้นไม่เป็นจริง กล่าวอีกนัยหนึ่ง มันจะทำงานเมื่อเงื่อนไขก่อนหน้านั้นไม่เป็นจริงหรือเป็นเงื่อนไข Default มาดูตัวอย่างการใช้งาน if else ในภาษา Python</p>
+<pre><code>n = 5
+if n == 10:
+    print('n equal to 10')
+else:
+    print('n is something else except 10')
+
+name = 'James'
+if name == 'Mateo':
+    print('Hi, Mateo.')
+else:
+    print('Who are you?') 
+
+money = 300
+if money >= 350:
+    print('You can buy an iPad')
+else:
+    print('You don\'t have enough money to buy an iPad')</code></pre><p>ในตัวอย่าง เป็นโปรแกรมเพื่อทดสอบการทำงานของคำสั่ง else เราได้เพิ่มบล็อคของคำสั่ง else เข้ามาหลังจากคำสั่ง if ซึ่งโค้ดในบล็อคของคำสัง else จะทำงาน ถ้าหากเงื่อนไขใน if ไม่เป็นจริง นั่นหมายถึงโปรแกรมของเราสามารถทำงานได้เพียงหนึ่งทางเลือกเท่านั้น</p>
+							<h1>if elif</h1>
+							<p>คำสั่ง elif นั้นเป็นคำสั่งที่ใช้สำหรับสร้างเงื่อนไขแบบหลายทางเลือกให้กับโปรแกรมที่มีการทำงานเช่นเดียวกับ switch case ในภาษาอื่นๆ คำสั่ง elif นั้นต้องใช้หลังจากคำสั่ง if เสมอและสามารถมี else ได้ในเงื่อนไขสุดท้าย มาดูตัวอย่างการใช้งานคำสั่ง elif ในภาษา Python</p>
+							<pre><code>print('Welcome to marcuscode\'s game')
+level = input('Enter level (1 - 4): ')
+
+if level == '1':
+    print('Easy')
+elif level == '2':
+    print('Medium')
+elif level == '3':
+    print('Hard')
+elif level == '4':
+    print('Expert')
+else:
+    print('Invalid level selected')</code></pre><p>ในตัวอย่าง เป็นโปรแกรมจำลองในการเลือกโหมดของการเล่นเกม เราได้ให้ผู้ใช้กรอกค่าระหว่าง 1 -4 เพื่อใช้ในการเปรียบเทียบกับระดับความยากของเกม โดยที่ 1 เป็นระดับที่ง่ายที่สุด และ 4 นั้นเป็นระดับที่ยากที่สุด คุณจะเห็นว่าเราได้ให้คำสั่ง elif เพราะเรามีเงื่อนไข 4 แบบ และคำสั่ง else ในการณีที่ตัวเลขที่ผู้เล่นกรอกเข้ามานั้นไม่ตรงกับเงื่อนไขใดๆ ก่อนหน้าเลย</p>
+									<h2>LESSON SUMMARY</h2>
+								 <p>• if-elif-else เป็นโครงสร้างการตัดสินใจ<br />
+									• คำสั่ง if ดำเนินการถ้าเงื่อนไขเป็นจริง หรือข้ามการดำเนินการหากเงื่อนไขเป็นเท็จ<br />
+									• คำสั่ง if... else ดำเนินการถ้าเงื่อนไขเป็นจริงหรือดำเนินการอื่นหากเงื่อนไขเป็นเท็จ<br />
+									• คำสั่ง if... elif... else ดำเนินการอย่างใดอย่างหนึ่งในหลายๆ การกระทำขึ้นอยู่กับความจริงหรือความเท็จของเงื่อนไขหลายประการ<br />
+									• ข้อความทั้งหมดในบล็อกมีการเยื้อง<br />
+									</p></div>
+									</div>
+<!-- Footer -->
+					<footer style="background-color:#2a2b2f;">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/SDivender" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://github.com/Sonparun" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://mail.google.com/mail/u/3/#inbox/FMfcgzGqQmZzSKRHhTLQwLVnKgXNXBKn?compose=VpCqJTCpvHSHrdzhJZTfJZRtzHQGgplcJmdRXmVVkrzDsPRKppLxcZxZNGJNsBrLCHkHpJv" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
