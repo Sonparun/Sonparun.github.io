@@ -62,114 +62,51 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>LECTURE - 09 PYGAME-ZERO</h1>
-							<span class="image main"><img src="images/l09.png" alt="" /></span>
-							<h1>INSTALL PYGAME-ZERO</h1>
-							<pre><code>- pip3 install pgzero</code></pre>
-							<h1>FIRST</h1>
-							<pre><code>import pgzrun
-pgzrun.go()
-</code></pre>
-									<div class="box alt">
-										<div class="row gtr-uniform">
-											<div class="col-12"><span class="image fit"><img src="images/l09p1.png" alt="" /></span></div>
-											
-										</div>
-
-									</div>
-<h1>HELLO</h1>
-<pre><code>import pgzrun
-width=400
-height=300
-def drwa():
- screen.fill(100,200,150)
- screen.draw.text('Hello World',topleft=(100,100),fontsize=30)
-pgzrun.go()
-</code></pre>
-									<div class="box alt">
-										<div class="row gtr-uniform">
-											<div class="col-12"><span class="image fit"><img src="images/l09p2.png" alt="" /></span></div>
-											
-										</div>
-
-									</div>
-<h1>SHOOT THE FRUIT</h1>
-<pre><code>import pgzrun
-width=640
-height=480
-apple=Actor('apple')
-def draw():
- screen.clear()
- apple.draw()
-def place_apple():
- apple.x=randint(10,600)
- apple.y=randint(10,400)
-def on_mouse_down(pos):
- if apple.collidepoint(pos):
-  print('Good Shot!')
-  place_apple()
- else:
-  print('You missed!')
-place_apple()
-pgzrun.go()
-</code></pre>
-									<div class="box alt">
-										<div class="row gtr-uniform">
-											<div class="col-12"><span class="image fit"><img src="images/l09p3.png" alt="" /></span></div>
-											
-										</div>
-
-									</div>
-<h1>COIN COLLECTION</h1>
-<pre><code>import pgzrun
-from random import randint
-width=800
-weight=600
-score=0
-game_over=False
-fox=Actor('fox')
-fox.pos=100,100
-coin=Actor('coin')
-coin.pos=200,200
-def draw():
- screen.fill(('blue')
- fox.draw()
- coin.draw()
- screen.draw.text('Score : '+str(score),color='white',topleft=(10,10)
- if game_over:
-  screen.fill('pink)
-  message='Final Score : '+str(score)
-  screen.draw.text(message,topleft=(10,10),fontsize=50)
-def place_coin():
- coin.x=randint(20,(width-20) 
- coin.y=randint(20,(height-20) 
-def update():
- if keyboard.left:
-  fox.x=fox.x-2
- elif keyboard.right:
-  fox.x=fox.x+2
- elif keyboard.up:
-  fox.y=fox.y-2
- elif keyboard.down:
-  fox.y=fox.y+2
- coin_collected=fox.colliderect(coin)
- if coin_collected():
-  place_coin()
-  score+=1
-def time_up():
- global game_over
- game_over=True
-clock.schedule(time_up,10.0)
-place_coin()
-pgzrun.go()
-</code></pre>
-									<div class="box alt">
-										<div class="row gtr-uniform">
-											<div class="col-12"><span class="image fit"><img src="images/l09p4.png" alt="" /></span></div>
-											
-										</div>
-
-									</div>
+							<h1>DOWNLOAD VISUAL STUDIO CODE</h1>
+							<span class="image main"><img src="images/lvs.png" alt="" /></span>
+							<h1>WHAT I WANT FROM VSCODE</h1>
+							<p>• เรียกใช้ Python<br/>
+• เติมข้อความอัตโนมัติ<br/>
+• Linting (เน้นปัญหาด้านวากยสัมพันธ์และโวหาร)<br/>
+• การจัดรูปแบบอัตโนมัติ (auto pep8)<br/>
+• แผนที่ขนาดเล็ก<br/>
+• พิเศษ เช่น ธีม ไอคอนไฟล์ การแก้ไขหลายบรรทัด ฯลฯ</p>
+<h1>VISUAL STUDIO CODE EXTENSION</h1>
+<p>• Code Runner<br/>
+• pip install pep8<br/>
+• Code-preferences-setting-python<br/>
+• Material Icon Theme</p>
+							<h1>VISUAL STUDIO CODE</h1>
+							<div class="row gtr-uniform">
+							<div class="col-12"><span class="image fit"><img src="images/lvsp1.png" alt="" /></span></div>
+							</div>
+							<h1 align=center><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></h1>
+							<h1>VISUAL STUDIO CODE</h1>
+							<div class="row gtr-uniform">
+							<div class="col-12"><span class="image fit"><img src="images/lvsp2.png" alt="" /></span></div>
+							</div>
+							<h1>GITHUB</h1>
+							<div class="row gtr-uniform">
+							<div class="col-12"><span class="image fit"><img src="images/lvsp3.png" alt="" /></span></div>
+							</div>
+							<h1 align=center><a href="https://github.com/">https://code.visualstudio.com/</a></h1>
+							<h1>WHY GITHUB</h1>
+							<p>• โปรไฟล์ที่ดี<br/>
+• ทำให้ง่ายต่อการมีส่วนร่วมกับโครงการโอเพ่นซอร์สของคุณ<br/>
+• เอกสารประกอบการ<br/>
+• นำเสนอผลงานของคุณ<br/>
+• Markdown<br/>
+• GitHub เป็นที่เก็บข้อมูล<br/>
+• ติดตามการเปลี่ยนแปลงในโค้ดของคุณในเวอร์ชันต่างๆ<br/>
+• ตัวเลือกการผสานรวมกับแพลตฟอร์มทั่วไป</p>
+<h1>GITHUB STEP</h1>
+<p>• Sign In GitHub<br/>
+• GitHub Extension<br/>
+• Create Repository<br/>
+• Clone GitHub Repository จาก  VSCode<br/>
+• Commit<br/>
+• Push
+</p>
 </div>
 </div>
 <!-- Footer -->
